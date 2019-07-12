@@ -45,7 +45,7 @@ ldd命令可以查看一个可执行程序依赖的共享库，
 我们通常把一些公用函数制作成函数库，供其它程序使用。
 函数库分为静态库和动态库两种
 
-##示例：
+## 示例：
 hello.h 为函数库的头文件  
 hello.c 为函数库的源程序
 main.c 为测试库文件的主程序
@@ -87,3 +87,6 @@ void hello(const char *name) {
 
 ## 思路二：静态库链接
 `ar rcs libmyhello.a hello.o`  
+`gcc main.c -static -L. -lmyhello`
+
+未完待续...
